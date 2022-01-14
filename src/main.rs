@@ -3,6 +3,7 @@
 
 use bevy::prelude::{App, ClearColor, Color, Msaa, WindowDescriptor};
 use bevy::DefaultPlugins;
+use bevy_rapier3d::prelude::*;
 use dice_challenge::GamePlugin;
 
 fn main() {
@@ -16,6 +17,8 @@ fn main() {
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)
+        .add_plugin(RapierPhysicsPlugin::<NoUserData>::default())
         .add_plugin(GamePlugin)
+        .add_system(bevy::input::system::exit_on_esc_system)
         .run();
 }
