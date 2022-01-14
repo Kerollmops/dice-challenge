@@ -383,18 +383,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy_game"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy_asset_loader",
- "bevy_kira_audio",
- "embed-resource",
- "rand",
- "winit 0.25.0",
-]
-
-[[package]]
 name = "bevy_gltf"
 version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1314,6 +1302,18 @@ checksum = "73770f8e1fe7d64df17ca66ad28994a0a623ea497fa69486e14984e715c5d174"
 dependencies = [
  "adler32",
  "byteorder",
+]
+
+[[package]]
+name = "dice_challenge"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_asset_loader",
+ "bevy_kira_audio",
+ "embed-resource",
+ "rand",
+ "winit 0.25.0",
 ]
 
 [[package]]

@@ -1,9 +1,9 @@
 // disable console on windows for release builds
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use bevy::prelude::{App, ClearColor, Color, WindowDescriptor, Msaa};
+use bevy::prelude::{App, ClearColor, Color, Msaa, WindowDescriptor};
 use bevy::DefaultPlugins;
-use bevy_game::GamePlugin;
+use dice_challenge::GamePlugin;
 
 fn main() {
     App::new()
@@ -12,7 +12,7 @@ fn main() {
         .insert_resource(WindowDescriptor {
             width: 800.,
             height: 600.,
-            title: "Bevy game".to_string(), // ToDo
+            title: "Dice Challenge".to_string(),
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)
